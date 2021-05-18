@@ -23,8 +23,10 @@ jobs:
     
     - name: Build the Docker image
       working-directory: guestbook
-      run: docker build . --tag ${{ secrets.DOCKER_USER}}/my-image-name:${{ github.sha }}
+      run: docker build . --tag ${{ secrets.DOCKER_USER}}/guestbook:${{ github.sha }}
     - name: Push Docker image
-      run: docker push ${{ secrets.DOCKER_USER}}/my-image-name:${{ github.sha }}
+      run: docker push ${{ secrets.DOCKER_USER}}/guestbook:${{ github.sha }}
+
+       
          
          
