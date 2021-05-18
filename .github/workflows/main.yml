@@ -38,3 +38,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo Mon id: 
+          echo ${DRONE_COMMIT_SHA:0:7}
