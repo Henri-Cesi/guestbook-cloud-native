@@ -39,4 +39,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo Mon id: 
-          echo ${DRONE_COMMIT_SHA:0:7}
+          echo ${{ steps.vars.outputs.sha_short }}
