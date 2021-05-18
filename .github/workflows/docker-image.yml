@@ -23,9 +23,9 @@ jobs:
     
     - name: Build the Docker image
       working-directory: guestbook
-      run: docker build . --tag my-image-name:${DRONE_COMMIT_SHA}
+      run: docker build . --tag my-image-name:${{ github.sha }}
       
     - name: Push Docker image
-      run: docker push my-image-name:${DRONE_COMMIT_SHA}
+      run: docker push my-image-name:${{ github.sha }}
          
          
